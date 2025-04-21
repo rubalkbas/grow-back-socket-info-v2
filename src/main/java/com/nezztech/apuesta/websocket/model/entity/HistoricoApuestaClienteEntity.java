@@ -1,7 +1,6 @@
 package com.nezztech.apuesta.websocket.model.entity;
 
 import java.io.Serializable;
-import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -19,10 +18,10 @@ import lombok.Setter;
  * @since 2024
  *
  */
+@Entity
+@Table(name="historico_apuesta_cliente", schema="internanueva")
 @Getter
 @Setter
-@Entity
-@Table(name = "historico_apuesta_cliente", schema = "interna")
 public class HistoricoApuestaClienteEntity implements Serializable {
 
 	/** serial */
@@ -31,10 +30,10 @@ public class HistoricoApuestaClienteEntity implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id_hist_apuest_cli")
-	private Integer idHistApuestaCliente;	
+	private Long idHistApuestaCliente;	
 	
 	@Column(name = "id_apuesta_cliente")
-	private Integer idApuestaCliente;
+	private Long idApuestaCliente;
 	
 	@Column(name = "valor_compra")
 	private Double valorCompra;

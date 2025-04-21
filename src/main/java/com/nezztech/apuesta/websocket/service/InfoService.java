@@ -76,7 +76,7 @@ public class InfoService {
             return;
         }
 		
-		List<Integer> idsAbiertas = abiertas.stream() .map(ApuestaClienteEntity::getIdApuestaCliente) .collect(Collectors.toList());
+		List<Long> idsAbiertas = abiertas.stream() .map(ApuestaClienteEntity::getIdApuestaCliente) .collect(Collectors.toList());
 		
 		List<UsuariosGanPer> lista = historicoApuestaClienteRepository.sumaGananciaPerdida(idsAbiertas);
 		

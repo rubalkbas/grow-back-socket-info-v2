@@ -28,9 +28,9 @@ public class ClientesDatosRepository {
 			+ "    u.total_dinero AS balance,\r\n"
 			+ "    (u.margen_libre + COALESCE(SUM(CASE WHEN ac.estatus_compra = 'ABIERTA' THEN hac.monto_gan_per ELSE 0 END), 0)) AS margenLibre,\r\n"
 			+ "    u.margen AS margen\r\n"
-			+ "FROM interna.usuarios u\r\n"
-			+ "LEFT JOIN interna.apuesta_cliente ac ON u.id_usuario = ac.id_usuario\r\n"
-			+ "LEFT JOIN interna.historico_apuesta_cliente hac ON ac.id_apuesta_cliente = hac.id_apuesta_cliente\r\n"
+			+ "FROM internanueva.usuarios u\r\n"
+			+ "LEFT JOIN internanueva.apuesta_cliente ac ON u.id_usuario = ac.id_usuario\r\n"
+			+ "LEFT JOIN internanueva.historico_apuesta_cliente hac ON ac.id_apuesta_cliente = hac.id_apuesta_cliente\r\n"
 			+ "GROUP BY u.id_usuario, u.total_dinero, u.margen_libre, u.margen\r\n"
 			+ "ORDER BY u.id_usuario ASC";
 	

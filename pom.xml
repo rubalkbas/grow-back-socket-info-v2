@@ -4,10 +4,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.nezztech</groupId>
-	<artifactId>NEZZTECH-APUESTAS-WEBSOCKET-INFO</artifactId>
+	<artifactId>grow-back-socket-info-v2</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>NEZZTECH-APUESTAS WEBSOCKET INFO</name>
-	<description>NEZZTECH APUESTAS WEBSOCKET INFO</description>
+	<name>grow-back-socket-info-v2</name>
+	<description>GROW BACK SOCKET INFO</description>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

@@ -23,12 +23,12 @@ public class HistoricoApuestaClienteRepository {
 	public EntityManager entityManager;
 	
 	private static final String SQL = "SELECT id_apuesta_cliente, SUM(monto_gan_per) AS total_suma "
-			+ "FROM interna.historico_apuesta_cliente "
+			+ "FROM internanueva.historico_apuesta_cliente "
 			+ "WHERE id_apuesta_cliente IN (:ids)  "
 			+ "GROUP BY id_apuesta_cliente";
 	
 	@Transactional
-	public List<UsuariosGanPer> sumaGananciaPerdida(List<Integer> idsAbiertas) {
+	public List<UsuariosGanPer> sumaGananciaPerdida(List<Long> idsAbiertas) {
 		
 		List<UsuariosGanPer> lista = new ArrayList<>();
 			
